@@ -11,9 +11,15 @@ app.use(express.json());
 app.use(cors());
 
 
+const atCredentials = {
+    apiKey: 'MyAppAPIkey',
+    username: 'MyAppUsername',
+}
+
 
 const AfricasTalking = require("africastalking")(atCredentials);
 const sms = AfricasTalking.SMS;
+
 
 app.listen(3007, () => {
     console.log("App is listening on port 3007");
